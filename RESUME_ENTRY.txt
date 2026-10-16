@@ -1,0 +1,7 @@
+Add to the resume ONLY after the project builds, tests pass, and it is deployed (replace the URLs).
+
+Payment & Verification Gateway | Kotlin, Spring Boot, PostgreSQL, RabbitMQ, Docker, GitHub Actions — github.com/<your-username>/payment-verification-gateway | Live: <your-render-url>
+
+- Built a Kotlin/Spring Boot payments backend with idempotent REST APIs (Idempotency-Key), PostgreSQL data models (Flyway) and a KYC verification step, preventing duplicate payments and duplicate provider calls on client retries.
+- Integrated the Razorpay sandbox with HMAC-verified webhooks feeding a RabbitMQ event consumer (idempotent processing, 3 retries with backoff, dead-letter queue) and a scheduled reconciliation job for missed webhooks.
+- Wrote JUnit tests (idempotency, KYC rejection, no status downgrade, signature verification) and shipped via Docker and GitHub Actions CI; deployed on Render.
